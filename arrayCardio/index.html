@@ -65,7 +65,49 @@
     console.log(totalYears);
 
     // 5. Sort the inventors by years lived
-    
+    const yearsLived = inventors.sort((a,b)=>{
+      ((a.passed - a.year) > (b.passed - b.year) ? -1 : 1)
+    })
+    console.table(yearsLived);
+
+    // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
+      // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+    // const category = document.querySelector('.mw-category');
+    // const links = Array.from(category.querySelectorAll('a'));
+    // const boulevardsWithDe = links
+    //   .map(link => link.textContent)
+    //   .filter(name => name.includes('de'));
+
+    // console.log(boulevardsWithDe);
+
+    // 7. sort Exercise
+    // Sort the people alphabetically by last name
+    const sortedPeople = people.sort((lastOne, nextOne)=>{
+      const [afirst, alast] = lastOne.split(',');
+      const [bfirst, blast] = nextOne.split(',')
+
+      return (alast> blast)? -1 : 1
+    })
+console.log(sortedPeople);
+
+
+    // 8. Reduce Exercise
+    // Sum up the instances of each of these
+    const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck', 'pogostick'];
+
+const counts = data.reduce((total, item) => {
+  if (!total[item]) {
+    total[item] = 1; // if not already counted, start at 1
+  } else {
+    total[item]++; // otherwise, add 1
+  }
+  return total; // always return the total object
+}, {}); // start with an empty object {}
+
+console.log(counts);
+
+
+
     </script>
 </body>
 </html>
