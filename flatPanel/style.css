@@ -1,0 +1,47 @@
+html{
+    box-sizing: border-box;
+    background: #ffc600;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+body{
+    margin: 0;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+.panels{
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+.panel{
+    background: #6B0F9C;
+    box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
+    color: #fff;
+    align-items: center;
+    transition: 
+     font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+     flex-grow 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+     background-color 0.2s;
+    ;
+    font-size: 20px;
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.panel1 { background-image:url(https://images.unsplash.com/photo-1747619715083-3db63905a75a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); }
+    .panel2 { background-image:url(https://plus.unsplash.com/premium_photo-1746167794471-508540dd0875?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNXx8fGVufDB8fHx8fA%3D%3D); }
+    .panel3 { background-image:url(https://plus.unsplash.com/premium_photo-1747375615029-515941ee7a99?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMHx8fGVufDB8fHx8fA%3D%3D); }
+    .panel4 { background-image:url(https://images.unsplash.com/photo-1747077138172-590c023ec442?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzNnx8fGVufDB8fHx8fA%3D%3D); }
+    .panel5 { background-image:url(https://plus.unsplash.com/premium_photo-1746637010097-5e79e6283d99?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0NHx8fGVufDB8fHx8fA%3D%3D); }
+
+.panel > *:first-child{transform: translateY(-100%);}
+.panel.open-active> *:first-child{transform: translateY(0);} 
